@@ -110,6 +110,55 @@ const cartSlice = createSlice({
       );
     },
 
+    updateItemOptions: (
+      state,
+      action: PayloadAction<{
+        id: string;
+        selectedSize: string;
+        selectedColor: string;
+      }>
+    ) => {
+      const { id, selectedSize, selectedColor } = action.payload;
+      const itemIndex = state.items.findIndex((it) => it.id === id);
+      if (itemIndex === -1) {
+        return;
+      }
+
+      const item = state.items[itemIndex];
+      const newId = `${item.product.id}-${selectedSize}-${selectedColor}`;
+
+      // If another item with the same product and new options exists, merge quantities
+      const duplicateIndex = state.items.findIndex(
+        (it, idx) =>
+          idx !== itemIndex &&
+          it.product.id === item.product.id &&
+          it.selectedSize === selectedSize &&
+          it.selectedColor === selectedColor
+      );
+
+      if (duplicateIndex !== -1) {
+        // Merge quantities into the existing duplicate
+        state.items[duplicateIndex].quantity += item.quantity;
+        // Remove the original item
+        state.items.splice(itemIndex, 1);
+      } else {
+        // Update the item's options and id
+        item.selectedSize = selectedSize;
+        item.selectedColor = selectedColor;
+        item.id = newId;
+      }
+
+      // Recalculate totals
+      state.totalItems = state.items.reduce(
+        (total, it) => total + it.quantity,
+        0
+      );
+      state.totalPrice = state.items.reduce(
+        (total, it) => total + it.product.price * it.quantity,
+        0
+      );
+    },
+
     clearCart: (state) => {
       state.items = [];
       state.totalItems = 0;
@@ -134,6 +183,7 @@ export const {
   addToCart,
   removeFromCart,
   updateQuantity,
+  updateItemOptions,
   clearCart,
   toggleCart,
   openCart,

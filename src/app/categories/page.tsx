@@ -17,7 +17,7 @@ export default function CategoriesPage() {
         <div className="mx-auto max-w-7xl px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-2xl font-bold text-gray-800">
-              StyleHub
+              Dummy Shop
             </Link>
 
             <div className="flex items-center space-x-6">

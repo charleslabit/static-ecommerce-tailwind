@@ -49,9 +49,7 @@ export default function HomePage() {
       {/* Navbar */}
       <nav className="bg-white/80 backdrop-blur-sm border-b border-gray-200 shadow-sm sticky top-0 z-50">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <Link href="/" className="text-2xl font-bold text-gray-800">
-            StyleHub
-          </Link>
+          <Link href="/" className="text-2xl font-bold text-gray-800"></Link>
 
           <div className="flex items-center space-x-4">
             <Link
@@ -132,7 +130,7 @@ export default function HomePage() {
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Welcome to{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              StyleHub
+              Dummy Shop
             </span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -246,7 +244,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Why Choose StyleHub
+            Why Choose Dummy Shop
           </h2>
           <p className="text-lg text-gray-600">
             Experience the future of online shopping with cutting-edge
@@ -300,7 +298,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6 py-8">
           <div className="text-center text-gray-600">
             <p>
-              &copy; 2025 StyleHub. Built with Next.js 15, Redux Toolkit, and
+              &copy; 2025 Dummy Shop. Built with Next.js 15, Redux Toolkit, and
               TypeScript.
             </p>
           </div>

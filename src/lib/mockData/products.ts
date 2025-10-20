@@ -122,8 +122,8 @@ export const PRODUCTS: Product[] = [
     subcategory: "Hoodies",
     brand: "ComfortZone",
     images: [
-      "https://images.unsplash.com/photo-1556821840-3a63f95609a4?w=500",
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500",
+      "https://nbastore.com.ph/cdn/shop/files/1_9b09b273-598b-4723-8868-468438a529a7_2400x.jpg?v=1727177370",
+      "https://nbastore.com.ph/cdn/shop/files/1_9b09b273-598b-4723-8868-468438a529a7_2400x.jpg?v=1727177370",
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: ["Gray", "Black", "Navy", "White"],
@@ -189,8 +189,8 @@ export const PRODUCTS: Product[] = [
     subcategory: "Blazers",
     brand: "ProfessionalWear",
     images: [
-      "https://images.unsplash.com/photo-1594938298605-cd8c8c2b6a4a?w=500",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500",
+      "https://cdn-images.farfetch-contents.com/25/67/00/97/25670097_55780987_2048.jpg",
+      "https://cdn-images.farfetch-contents.com/25/67/00/97/25670097_55780987_2048.jpg",
     ],
     sizes: ["XS", "S", "M", "L", "XL"],
     colors: ["Navy", "Black", "Gray"],
